@@ -13,48 +13,31 @@ package prep;
 
 public class LinkedListProblem {
 
-    public void initLinkedListAndPlay() {
+    public static void initLinkedListAndPlay() {
+        LinkedList list = new LinkedList();
+        list.insert(7);
+        list.insert(7);
+        list.insert(6);
+        list.insert(7);
+        list.insert(12);
+        list.insert(1);
+        list.insert(4);
+        list.insert(7);
+        list.insert(7);
+        list.insert(7);
+        list.insert(9);
 
+        System.out.println(list);
+
+
+        System.out.println("12 = " + list.contains(12));
+        System.out.println("13 = " + list.contains(13));
+        System.out.println("4 = " + list.contains(4));
+
+        list.delete(6);
+        System.out.println("6 = "+list.contains(6));
+
+        list.deleteAllFound(7);
+        System.out.println(list);
     }
 }
-
-class LinkedList {
-    Node node;
-
-    static class Node {
-        int data;
-        Node node;
-
-        Node(int data) {
-            this.data = data;
-            this.node = null;
-        }
-    }
-
-    public void insert(int data) {
-        node = insertRecursively(node, data);
-    }
-
-    public boolean contains(int data) {
-        return containsRecursively(node, data);
-    }
-
-    private Node insertRecursively(Node current, int data) {
-        if (current == null)
-            return new Node(data);
-
-        current = insertRecursively(current.node, data);
-        return current;
-    }
-
-    private boolean containsRecursively(Node current, int data) {
-        if (current == null)
-            return false;
-        if (current.data == data)
-            return true;
-
-        return containsRecursively(current.node, data);
-    }
-
-}
-
