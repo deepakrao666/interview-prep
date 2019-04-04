@@ -1,8 +1,8 @@
 package prep;
 
 public class AmazonPair03042019 {
-
-    // data set =
+    // this question was asked to me during the pair programing coding interview on 03-04-2019-16:00
+    // data set
     // a, 1 --> b
     // a, 3 --> c
     //fs, 3 -- iv
