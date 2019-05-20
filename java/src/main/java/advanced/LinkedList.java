@@ -1,4 +1,4 @@
-package prep;
+package advanced;
 
 /*
  * you have to delete all occurrences

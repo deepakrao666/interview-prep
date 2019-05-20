@@ -1,8 +1,7 @@
 package prep;
 
+import advanced.LinkedListProblem;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LinkedListProblemTest {
 
