@@ -1,4 +1,4 @@
-package prep;
+package prep.hackerrank;
 
 /**
  * Gary is an avid hiker. He tracks his hikes meticulously, paying close attention to small details like topography. During his last hike he took exactly steps. For every step he took, he noted if it was an uphill, , or a downhill, step. Gary's hikes start and end at sea level and each step up or down represents a
@@ -11,7 +11,7 @@ package prep;
  */
 public class ValleyHR {
     // Complete the countingValleys function below.
-    static int countingValleys(int n, String s) {
+    public static int countingValleys(int n, String s) {
         char[] arr = s.toCharArray();
         int res = 0, i = 0, op = 0;
         while( i < arr.length){

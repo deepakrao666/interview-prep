@@ -1,15 +1,15 @@
-package prep;
+package prep.amazon;
 
 public class AmazonPair03042019 {
     // this question was asked to me during the pair programing coding interview on 03-04-2019-16:00
-    // data set
-    // a, 1 --> b
-    // a, 3 --> c
-    //fs, 3 -- iv
+    // data set: string s, int n -> each character move by n steps to return new string
+    // a, 1 step to b --> b
+    // a, 3 steps to c--> c
+    //fs, 3 steps to make iv -- iv
     static final char[] small = initArray(26, false);
     static final char[] big = initArray(26, true);
 
-    static String stepTheString(String text, int step) {
+    public static String stepTheString(String text, int step) {
         if (step == 0) {
             return text;
         }

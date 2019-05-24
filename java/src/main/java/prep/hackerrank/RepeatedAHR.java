@@ -1,4 +1,4 @@
-package prep;
+package prep.hackerrank;
 
 public class RepeatedAHR {
     /**
@@ -7,7 +7,7 @@ public class RepeatedAHR {
      * @param n
      * @return
      */
-    static long repeatedString(String s, long n) {
+    public static long repeatedString(String s, long n) {
         long m = n / s.length(), r = n % s.length(), countOfAInS = 0;
         int[] pos = new int[s.length()];
         for (int i = 0; i < s.length(); i++) {

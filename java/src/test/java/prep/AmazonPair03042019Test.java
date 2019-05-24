@@ -1,8 +1,7 @@
 package prep;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import prep.amazon.AmazonPair03042019;
 
 public class AmazonPair03042019Test {
 

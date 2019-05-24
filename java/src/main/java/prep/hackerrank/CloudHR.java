@@ -1,4 +1,4 @@
-package prep;
+package prep.hackerrank;
 
 public class CloudHR {
     /**
@@ -9,7 +9,7 @@ public class CloudHR {
      * @param c
      * @return
      */
-    static int jumpingOnClouds(int[] c) {
+    public static int jumpingOnClouds(int[] c) {
         int res = 0;
         for (int i = 0; i < c.length; ) {
             if ((i + 2) < c.length && c[i + 2] == 0) {
