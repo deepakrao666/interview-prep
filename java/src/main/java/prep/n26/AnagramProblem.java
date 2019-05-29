@@ -1,35 +1,57 @@
 package prep.n26;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class AnagramProblem {
     /**
      * Coding challenge for phone interview at N26
      * For 2 strings where s1.length > s2.length
      * find how many anagrams of string s2 are in string s1
      */
-    public static void solution(String s1, String s2){
-        int MAX = 256;
-        if(s1.length() < s2.length()){
+    private static Map<Character, Integer> map;
+
+    public static void solution(String s1, String s2) {
+        if (s1.length() < s2.length()) {
             System.out.println("no anagram");
             return;
         }
-        char[] arr = s2.toLowerCase().toCharArray();
-        int M = s1.length();
-        int N = s2.length();
 
-        // countP[]:  Store count of all
-        // characters of pattern
-        // countTW[]: Store count of current
-        // window of text
-        char[] countP = new char[MAX];
-        char[] countTW = new char[MAX];
-        for (int i = 0; i < M; i++)
-        {
-            (countP[s1.charAt(i)])++;
-            (countTW[s2.charAt(i)])++;
+        int p, count = 0;
+        for(int i = 0; i < s1.length(); i++ ){
+            p = i;
+            while( p < s2.length() ){
+                makeMap(s2);
+                char target = s1.charAt(p);
+                if( map.containsKey(target)){
 
-            System.out.println(countP[i] +" : "+countTW[i]);
+                    if(map.get(target) == 0){
+                        map.remove(target);
+                    }else {
+                        p++;
+                        map.put( target, map.get(target)-1);
+                    }
+                }
+            }
+            if( p == s2.length()){
+                    count++;
+            }
         }
+        System.out.println("No. of anagrams found are = " + count );
 
+    }
+
+    private static void makeMap(String s) {
+        char[] cArr = s.toCharArray();
+        map = new HashMap<>();
+        for (char i : cArr) {
+            if (map.containsKey(i)) {
+                map.put(i, map.get(i) + 1);
+            } else {
+                map.put(i, 1);
+            }
+        }
+        System.out.println(map.toString());
     }
 }

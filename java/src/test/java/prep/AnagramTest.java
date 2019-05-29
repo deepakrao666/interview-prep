@@ -8,13 +8,13 @@ public class AnagramTest {
 
     @Test
     public void isAnagramTest() {
-       assertTrue(Anagram.isAnagram("asdasd", "dsadsa"));
-       assertTrue(Anagram.isAnagram("a", "a"));
-       assertFalse(Anagram.isAnagram("", "a"));
-       assertFalse(Anagram.isAnagram("a", ""));
-       assertFalse(Anagram.isAnagram("", ""));
-       assertFalse(Anagram.isAnagram(null, null));
-       assertFalse(Anagram.isAnagram("", null));
-       assertFalse(Anagram.isAnagram( null, null));
+       assertTrue(LargestContiguousSumTest.Anagram.isAnagram("asdasd", "dsadsa"));
+       assertTrue(LargestContiguousSumTest.Anagram.isAnagram("a", "a"));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram("", "a"));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram("a", ""));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram("", ""));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram(null, null));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram("", null));
+       assertFalse(LargestContiguousSumTest.Anagram.isAnagram( null, null));
     }
 }
